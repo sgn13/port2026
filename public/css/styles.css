@@ -1581,10 +1581,10 @@ html {
 html, body {
      background:
         radial-gradient(
-            rgba(255, 244, 231, 0.441),
-            rgba(196, 113, 13, 0.365)
+            rgba(99, 98, 98, 0.039),
+            rgba(196, 114, 13, 0.044)
         ),
-        url('../images/texture.avif');    background-repeat: no-repeat;
+        url('../images/texture.png');    background-repeat: no-repeat;
     background-size: cover;
       height: 100vh;
     overflow: hidden;
@@ -1599,7 +1599,7 @@ body {
     font-size: var(--text-size);
     font-style: normal;
     font-weight: normal;
-    line-height: var(--vspace-1);
+    /* line-height: var(--vspace-1); */
     color: var(--color-text);
     margin: 0;
     padding: 0;
@@ -1610,14 +1610,14 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-    color: var(--color-1);
+    color: inherit;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
-a:hover, a:focus, a:active {
+/* a:hover, a:focus, a:active {
     color: var(--color-2);
-}
+} */
 
 a:hover, a:active {
     outline: 0;
@@ -1671,14 +1671,14 @@ h5, .h5, h6, .h6 {
 
 h1, .h1 {
     font-size: var(--text-display-1);
-    line-height: calc(var(--vspace-1_75) + var(--vspace-0_125));
+    /* line-height: calc(var(--vspace-1_75) + var(--vspace-0_125)); */
     letter-spacing: -.015em;
 }
 
 @media screen and (max-width: 600px) {
     h1, .h1 {
         font-size: var(--text-xxxl);
-        line-height: var(--vspace-1_75);
+        /* line-height: var(--vspace-1_75); */
     }
 }
 
@@ -3239,14 +3239,17 @@ input[type="button"].btn--primary:focus {
     padding: 0;
     margin: 0;
     position: relative;
+    
 }
 
 .s-header__nav a {
     display: block;
     height: var(--header-height);
     line-height: var(--header-height);
-    padding-right: 2rem;
+    padding-right: 3rem;
     color: rgb(0, 0, 0);
+    font-weight: 500;
+
 }
 
 .s-header__nav a:hover, .s-header__nav a:focus {
@@ -4787,12 +4790,14 @@ header{
 header h1{
     font-weight: 200;
     font-size: 60px;
+    color: #464242;
+
 }
 
 header p{
     font-weight: 400;
     font-size: 16px;
-    color: #313030;
+    color: #464242;
 }
 
 section{
@@ -4800,8 +4805,11 @@ section{
 }
 
 section p {
-    font-size: 16px;
+    font-size: 1.6rem;
     width: 90%;
+    line-height: normal;
+    color: #464242;
+
 }
 .highlight{
     color: #AD684D;
@@ -4809,13 +4817,13 @@ section p {
 .project_container{
      display: flex;
       flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 
 }
 .project_wrapper{
       display: flex;
       flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     cursor: pointer;
     transition: 0.5s ease;
     
@@ -4826,9 +4834,14 @@ color:#AD684D ;
 .project_title{
      font-weight: 200;
     font-size: 60px;
-  
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
+svg{
+    stroke: #AD684D;
+}
 @media screen and (max-width: 800px) {
 .container{
     width: 90%;
@@ -4837,4 +4850,16 @@ section p {
     width: 100%;
 }
    
+}
+
+.project_title svg{
+    font-size: 1rem;
+    height: 24px;
+}
+
+.anchor{
+    transition: 0.5s ease;
+}
+.anchor:hover{
+    opacity: 0.7;
 }
